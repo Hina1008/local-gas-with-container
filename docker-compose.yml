@@ -1,0 +1,17 @@
+version: '3'
+services:
+  sample1:
+    build: .
+    volumes:
+      - ./sample1/:/opt/
+      - ./.clasprc.json.sample1:/root/.clasprc.json
+    working_dir: /opt/
+    tty: true
+
+  sample2:
+    build: .
+    volumes:
+      - ./sample2/:/opt/
+      - ./.clasprc.json.sample2:/root/.clasprc.json
+    working_dir: /opt/
+    tty: true
